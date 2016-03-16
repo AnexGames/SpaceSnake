@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Zone1.cs">
+    <Files>
+      <File FileName="Assets\BulletObj_Right.cs" Line="29" Column="99" />
+      <File FileName="Assets\BulletObj.cs" Line="28" Column="100" />
+      <File FileName="Assets\TurretFire.cs" Line="10" Column="2" />
+      <File FileName="Assets\ScoreMultiplier.cs" Line="6" Column="40" />
+      <File FileName="Assets\_Scripts\PlayerMovement.cs" Line="338" Column="38" />
+      <File FileName="Assets\GameManager.cs" Line="148" Column="4" />
+      <File FileName="Assets\_Scripts\_food.cs" Line="88" Column="4" />
+      <File FileName="Assets\_Scripts\_super.cs" Line="100" Column="26" />
+      <File FileName="Assets\Zone1.cs" Line="43" Column="20" />
+      <File FileName="Assets\FinalMazePickup.cs" Line="31" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

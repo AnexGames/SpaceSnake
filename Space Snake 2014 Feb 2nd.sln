@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space Snake 2014 Feb 2nd.CSharp.Plugins", "Space Snake 2014 Feb 2nd.CSharp.Plugins.csproj", "{55930DF3-68A9-F9F0-99E4-78322BA584AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space Snake 2014 Feb 2nd.CSharp", "Space Snake 2014 Feb 2nd.CSharp.csproj", "{8CED43CC-959A-00E1-A367-62EC3757AEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space Snake 2014 Feb 2nd.CSharp.Editor", "Space Snake 2014 Feb 2nd.CSharp.Editor.csproj", "{B7F73178-990C-2D72-D66A-4CC07D2CDFB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55930DF3-68A9-F9F0-99E4-78322BA584AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55930DF3-68A9-F9F0-99E4-78322BA584AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55930DF3-68A9-F9F0-99E4-78322BA584AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55930DF3-68A9-F9F0-99E4-78322BA584AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CED43CC-959A-00E1-A367-62EC3757AEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CED43CC-959A-00E1-A367-62EC3757AEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CED43CC-959A-00E1-A367-62EC3757AEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CED43CC-959A-00E1-A367-62EC3757AEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F73178-990C-2D72-D66A-4CC07D2CDFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F73178-990C-2D72-D66A-4CC07D2CDFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F73178-990C-2D72-D66A-4CC07D2CDFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F73178-990C-2D72-D66A-4CC07D2CDFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/_food.cs">
+    <Files>
+      <File FileName="Assets/_Scripts/PlayerMovement.cs" Line="380" Column="32" />
+      <File FileName="Assets/GameManager.cs" Line="94" Column="5" />
+      <File FileName="Assets/MazePickup.cs" Line="9" Column="2" />
+      <File FileName="Assets/_Scripts/SnakeMovement.cs" Line="165" Column="3" />
+      <File FileName="Assets/_Scripts/_food.cs" Line="50" Column="24" />
+      <File FileName="Assets/_Scripts/_super.cs" Line="72" Column="4" />
+      <File FileName="Assets/FinalMazePickup.cs" Line="22" Column="2" />
+      <File FileName="Assets/_Scripts/FloatingScore.cs" Line="12" Column="2" />
+      <File FileName="Assets/_Scripts/FloatingTextDriver.cs" Line="39" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

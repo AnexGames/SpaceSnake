@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameManager.cs">
+    <Files>
+      <File FileName="../TurretBullet2.cs" Line="22" Column="50" />
+      <File FileName="Assets/Turret.cs" Line="25" Column="1" />
+      <File FileName="Assets/_Scripts/PlayerMovement.cs" Line="400" Column="2" />
+      <File FileName="Assets/_Scripts/FloatingScore.cs" Line="120" Column="4" />
+      <File FileName="Assets/_Scripts/FloatingTextDriver.cs" Line="8" Column="2" />
+      <File FileName="Assets/BulletObj.cs" Line="20" Column="2" />
+      <File FileName="Assets/BulletObj_Right.cs" Line="41" Column="1" />
+      <File FileName="Assets/TurretFire.cs" Line="48" Column="3" />
+      <File FileName="Assets/MazePickup.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameManager.cs" Line="112" Column="31" />
+      <File FileName="Assets/_Scripts/_food.cs" Line="53" Column="3" />
+      <File FileName="Assets/FinalMazePickup.cs" Line="35" Column="4" />
+      <File FileName="Assets/ParticleMoveTO.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameManager.cs">
+    <Files>
+      <File FileName="Assets\LevelGridBlock.cs" Line="14" Column="1" />
+      <File FileName="Assets\_Scripts\PlayerMovement.cs" Line="191" Column="5" />
+      <File FileName="Assets\_Scripts\Barrier.cs" Line="6" Column="1" />
+      <File FileName="Assets\_Scripts\_food.cs" Line="156" Column="112" />
+      <File FileName="Assets\ZonePickup.cs" Line="9" Column="2" />
+      <File FileName="Assets\_Scripts\score.cs" Line="225" Column="1" />
+      <File FileName="Assets\GameManager.cs" Line="79" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

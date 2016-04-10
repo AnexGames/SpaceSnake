@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class PlayerMovement : MonoBehaviour {
 	
@@ -59,7 +60,15 @@ public class PlayerMovement : MonoBehaviour {
 	public static bool startTimer = false;
 	private float jumpTick = 0f;
 	public float jumpTickTime = 10f;
-	
+
+    private bool spawned = false;
+    private float decay;
+    private bool delay = false;
+    public int timeToSpeed = 50;
+    private int speedcount = 0;
+    public float timeToStep = 0.07f;
+    private float elapsedStepTime;
+
 	void Awake(){ 
 	
 		//set framerate to 60
@@ -268,76 +277,115 @@ public class PlayerMovement : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(death, transform.position);
 			}
 			playAudio = false;
-			
 		}
-		snakeHead = snakeUpdate[0].gameObject;
-		
-		//if player is not dead
-		if(!isDead){
-			//Timer for Jump
-			if(canJump == false){
-				if(startTimer == true){
-					jumpTick += Time.deltaTime;
-					if(jumpTick > jumpTickTime){
-						canJump = true;
-						jumpTick -= jumpTickTime;
-					}
-				}
-			}
-					
-						
-			//update position and cache to grid 
-			//set our transform var to this transform
-			//My tick timer that updates position of snake
-			
-				
-			if(isTeleported == false){
-				sinceLastTick += Time.deltaTime;
-				if (Input.GetKey(KeyCode.UpArrow))    nextDir = myGrid.up;
-	    		else if (Input.GetKey(KeyCode.DownArrow))  nextDir = -myGrid.up;
-	  			else if (Input.GetKey(KeyCode.LeftArrow))  nextDir = -myGrid.right;
-	    		else if (Input.GetKey(KeyCode.RightArrow)) nextDir = myGrid.right;
-				
-				if(startTimer == true){
-					if(canJump == true){
-						if(Input.GetKeyDown("space")){
-							isJumped = true;
-							}
-						}
-				}
-					
-				if(sinceLastTick > tickTime){
-						if(isJumped == true){
-							StartCoroutine(snakeJump());
-							startTimer = true;
-							canJump = false;
-							isJumped = false;
-						}
-						
-						else if (-nextDir != direction) {
-	  						 direction = nextDir;
-							
-						}
-						DrawSnake();
-						cached.position += direction;
-						
-				
-						GameManager.totalScore += 1;
-						
-						
-						sinceLastTick -= tickTime;
-						
-					}
-				
-				}
-				
-				else if(isTeleported == true){
-					StartCoroutine(TeleportSnake());	
-				}
-			}
-		
+        if (elapsedStepTime + Time.deltaTime > timeToStep)
+        {
+           
+            elapsedStepTime = 0;
+            snakeHead = snakeUpdate[0].gameObject;
 
-			
+            if (speedcount >= this.timeToSpeed)
+            {
+                speedcount = 0;
+                this.timeToStep -= 0.0005f;
+               
+                if (this.timeToStep < 0.06)
+                {
+                    if (this.timeToStep < 0.05)
+                    {
+
+                        this.timeToSpeed = 75;
+                    }
+                    else
+                    {
+                        this.timeToSpeed = 100;
+                    }
+                    
+                }
+            }
+
+            //if player is not dead
+            if (!isDead)
+            {
+                //Timer for Jump
+                if (canJump == false)
+                {
+                    if (startTimer == true)
+                    {
+                        jumpTick += Time.deltaTime;
+                        if (jumpTick > jumpTickTime)
+                        {
+                            canJump = true;
+                            jumpTick -= jumpTickTime;
+                        }
+                    }
+                }
+
+
+                //update position and cache to grid 
+                //set our transform var to this transform
+                //My tick timer that updates position of snake
+
+
+                if (isTeleported == false)
+                {
+                    sinceLastTick += Time.deltaTime;
+                    if (Input.GetKey(KeyCode.UpArrow)) nextDir = myGrid.up;
+                    else if (Input.GetKey(KeyCode.DownArrow)) nextDir = -myGrid.up;
+                    else if (Input.GetKey(KeyCode.LeftArrow)) nextDir = -myGrid.right;
+                    else if (Input.GetKey(KeyCode.RightArrow)) nextDir = myGrid.right;
+
+                    if (startTimer == true)
+                    {
+                        if (canJump == true)
+                        {
+                            if (Input.GetKeyDown("space"))
+                            {
+                                isJumped = true;
+                            }
+                        }
+                    }
+
+                    if (sinceLastTick > tickTime)
+                    {
+                        if (isJumped == true)
+                        {
+                            StartCoroutine(snakeJump());
+                            startTimer = true;
+                            canJump = false;
+                            isJumped = false;
+                        }
+
+                        else if (-nextDir != direction)
+                        {
+                            direction = nextDir;
+
+                        }
+                        DrawSnake();
+                        cached.position += direction;
+
+
+                        GameManager.totalScore += 1;
+
+
+                        sinceLastTick -= tickTime;
+
+                    }
+
+                }
+
+                else if (isTeleported == true)
+                {
+                    StartCoroutine(TeleportSnake());
+                }
+            }
+            delay = true;
+        }
+        else
+        {
+            elapsedStepTime += Time.deltaTime;
+            speedcount++;
+		}
 		
 	}
 	
@@ -374,7 +422,12 @@ public class PlayerMovement : MonoBehaviour {
 //	
 	// Keep track of inputs and change direction variable depending on key press
 	public void HeadMovement(){
-		
+        Reset();
+        if (spawned) //inpout test, try to prevent input spamming
+        {
+            decay = 1f;
+            spawned = true;
+        }
 		if(Input.GetKeyDown("up") && !down) {
 			up = true;
 			down = false;
@@ -477,7 +530,20 @@ public class PlayerMovement : MonoBehaviour {
 //		}
 	}
 
-	public void MoveBack(){
+    private void Reset()
+    {
+        if(spawned && decay > 0)
+        {
+            decay -= Time.deltaTime;
+        }
+        if (decay < 0)
+        {
+            decay = 0;
+            spawned = false;
+        }
+    }
+
+    public void MoveBack(){
 		iTween.MoveUpdate(this.gameObject, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), 1.0f);	
 	}
 	//this function draws the snakebody every tick 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Arcade Maze.unity
+- path: Assets/_Scenes/Arcade Maze 1 Line.unity
   isLoaded: 1
   isActive: 1

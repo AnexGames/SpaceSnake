@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class randomMovement : MonoBehaviour {
 	
-	public static float playerSpeed = 30.0f;
+	public static float playerSpeed = 5.0f;
 	public static bool isDead;
 	
 	//Create our snake list that holds head and body objects
@@ -25,7 +25,12 @@ public class randomMovement : MonoBehaviour {
 	private bool right;
 	private bool up;
 	private bool down;
-		
+
+    //movement confinement
+    private bool lastleft;
+    private bool lastright;
+    private bool lastup;
+    private bool lastdown;
 
 	// Use this for initialization
 	void Start () {
@@ -66,49 +71,62 @@ public class randomMovement : MonoBehaviour {
 			
 			//transform.position += new Vector3(0,3,0);
 			
-			if(Input.GetKey ("up")&& !down) {
-				up = true;
-				down = false;
-				left = false;
-				right = false;
-				
-				//rotate snake 90 degrees upward
-				transform.up = Vector3.Slerp(Vector3.up, Vector3.up ,rotationSpeed * Time.deltaTime);
-				
-			}
+			if(Input.GetKey ("up")&& !down && !lastdown) {
+                up = true;
+                down = false;
+                left = false;
+                right = false;
+
+                //rotate snake 90 degrees upward
+                transform.up = Vector3.Slerp(Vector3.up, Vector3.up, rotationSpeed * Time.deltaTime);
+                lastup = true;
+                lastdown = false;
+                lastleft = false;
+                lastright = false;
+            }
 			
-			else if(Input.GetKey ("down") && !up){
-				up = false;
-				down = true;
-				left = false;
-				right = false;
-				
-				//rotate snake 90 degrees down 
-				transform.up = Vector3.Slerp(Vector3.up, -Vector3.up ,rotationSpeed * Time.deltaTime);
-				
-			}
+			else if(Input.GetKey ("down") && !up && !lastup){
+                up = false;
+                down = true;
+                left = false;
+                right = false;
+
+                //rotate snake 90 degrees down 
+                transform.up = Vector3.Slerp(Vector3.up, -Vector3.up, rotationSpeed * Time.deltaTime);
+                lastup = false;
+                lastdown = true;
+                lastleft = false;
+                lastright = false;
+            }
 			
-			else if(Input.GetKey ("left") && !right ){
-				up = false;
-				down = false;
-				left = true;
-				right = false;
-				
-				//rotate snake 90 degrees left
-				transform.up = Vector3.Slerp(Vector3.up, Vector3.left ,rotationSpeed * Time.deltaTime);
-				
-				
-			}
+			else if(Input.GetKey ("left") && !right && !lastright){
+                up = false;
+                down = false;
+                left = true;
+                right = false;
+
+                //rotate snake 90 degrees left
+                transform.up = Vector3.Slerp(Vector3.up, Vector3.left, rotationSpeed * Time.deltaTime);
+                lastup = false;
+                lastdown = false;
+                lastleft = true;
+                lastright = false;
+
+            }
 			
-			else if(Input.GetKey ("right") && !left){
-				up = false;
-				down = false;
-				left = false;
-				right = true;
-				
-				//rotate snake 90 degrees right
-				transform.up = Vector3.Slerp(Vector3.up, Vector3.right ,rotationSpeed * Time.deltaTime);	
-			}
+			else if(Input.GetKey ("right") && !left && !lastleft){
+                up = false;
+                down = false;
+                left = false;
+                right = true;
+
+                //rotate snake 90 degrees right
+                transform.up = Vector3.Slerp(Vector3.up, Vector3.right, rotationSpeed * Time.deltaTime);
+                lastup = false;
+                lastdown = false;
+                lastleft = false;
+                lastright = true;
+            }
 		
 		}
 		

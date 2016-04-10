@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceSnake.CSharp.Plugins", "SpaceSnake.CSharp.Plugins.csproj", "{ADAB4343-D7C9-ADB1-7259-714479A04958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceSnake.CSharp", "SpaceSnake.CSharp.csproj", "{16F71138-005B-AD9F-3010-D3CFF1F0FCAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceSnake.CSharp.Editor", "SpaceSnake.CSharp.Editor.csproj", "{CA7C7CD2-1C35-ECF0-CEEB-6B49B74CA68C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADAB4343-D7C9-ADB1-7259-714479A04958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAB4343-D7C9-ADB1-7259-714479A04958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAB4343-D7C9-ADB1-7259-714479A04958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAB4343-D7C9-ADB1-7259-714479A04958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16F71138-005B-AD9F-3010-D3CFF1F0FCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16F71138-005B-AD9F-3010-D3CFF1F0FCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16F71138-005B-AD9F-3010-D3CFF1F0FCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16F71138-005B-AD9F-3010-D3CFF1F0FCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7C7CD2-1C35-ECF0-CEEB-6B49B74CA68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7C7CD2-1C35-ECF0-CEEB-6B49B74CA68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7C7CD2-1C35-ECF0-CEEB-6B49B74CA68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7C7CD2-1C35-ECF0-CEEB-6B49B74CA68C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
